@@ -1,0 +1,230 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0; 
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(124,247,212,.22), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(255,122,162,.18), transparent 55%),
+      linear-gradient(180deg, #0b0f1a, #101a2c);
+    color: #e9eef7;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.55;
+    /* background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif; */
+    main{
+        header{
+            width: 100vw;
+            display: flex;        
+            align-items: center;
+            justify-content: space-between;
+            gap: clamp(0.5rem, 2vw, 2rem);
+
+            height: 10vh;
+            min-height: 64px;
+
+            padding: 0 clamp(1rem, 4vw, 2rem);
+
+            background: rgba(11,15,26,.72);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,.10);
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            /* padding: 0 5%;  
+            gap: 2rem;            
+            height: 10vh;
+            padding: 0 2rem;    
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            /* background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.1); */
+            /* position: fixed; 
+            top: 0;  */
+            /* margin-bottom: 20vh; */
+            img {
+              height: 70%;
+              aspect-ratio: 1;
+              object-fit: cover;
+              border-radius: 14px;
+              border: 1px solid rgba(255,255,255,.14);
+              box-shadow: 0 10px 30px rgba(0,0,0,.35);
+                /* height: 100%; 
+                aspect-ratio:1; */
+                /* filter: brightness(0%) */
+            }
+            nav{
+              padding-left: 0; /* quita el 10vw (eso rompe en pantallas pequeñas) */
+              display: flex;
+              flex-wrap: wrap; /* baja a otra línea si hace falta, sin “cambiar diseño” */
+              justify-content: flex-end;
+              gap: clamp(0.2rem, 0.8vw, 0.5rem);
+                /* padding-left: 10vw; */
+                a {
+                  color: rgba(233,238,247,.72);
+                  font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+                  text-decoration: none;
+                  margin: 0;
+                  padding: clamp(0.35rem, 0.9vw, 0.55rem) clamp(0.55rem, 1.2vw, 0.85rem);
+                  border-radius: 999px;
+                  border: 1px solid transparent;
+
+                  transition: transform .15s ease, border-color .2s ease, color .2s ease, background-color .2s ease;
+                    /* color: rgb(36, 24, 24);
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    margin: 0 1vw; 
+                    transition: pink 0.5s; 
+                    transform: scale(1.1);                        */
+                } 
+                a:hover{
+                  color: #e9eef7;
+                  background: rgba(255,255,255,.06);
+                  border-color: rgba(255,255,255,.14);
+                  transform: translateY(-1px);
+                  text-shadow: none;
+                  /* color: crimson;
+                  font-size: 1.3rem;
+                  text-shadow: 0 0 8px rgba(220, 20, 60, 0.6); */
+                } 
+                a:focus{
+                  color: #e9eef7;
+                  background: linear-gradient(90deg, rgba(124,247,212,.20), rgba(255,122,162,.18));
+                  border-color: rgba(255,255,255,.18);
+                  outline: none;
+                  /* color: rgb(35, 204, 182); */
+                } 
+            }
+        }
+        main{                        
+            article{
+                scroll-margin-top: 13vh;
+                background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+                border-radius: 18px;
+                box-shadow: 0 18px 50px rgba(0,0,0,.45);
+                border: 1px solid rgba(255,255,255,.10);
+
+                height: 83vh; /* mantienes “todas las cajas igual” como quieres */
+                margin: 5vh 2vw;
+
+                /* antes tenías 10vh 10vw (eso se dispara en pantallas pequeñas) */
+                padding: clamp(1.2rem, 4vw, 3.2rem);
+
+                color: #e9eef7;
+                /* background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08); */
+                /* background-color: rgb(30, 40, 63); */
+                /* height: 83vh;
+                margin-top: 5vh; 
+                margin-bottom: 5vh; 
+                margin-left: 2vw;
+                margin-right: 2vw; */
+                /* border-radius: 10dvh; */
+                /* padding: 10vh 10vw;
+                color: rgb(10, 28, 44); */
+                /* box-shadow: inset 5px 5px 10px rgb(9, 78, 63); */
+                /* height: fit-content; */
+             
+            }
+            #sm { 
+                  margin-top: 13vh;
+                  display: grid;
+                  grid-template-columns: repeat(7, 1fr);
+                  grid-template-rows: 2fr 6vh;
+                  h1{
+                    grid-column: 1/5;
+                    grid-row: 1/2;
+                    margin-bottom: 1rem; 
+                    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+
+                    /* font-size: 2.5vw; */
+                  }
+                  figure{
+                    margin: 0;
+                    display: flex;
+                    justify-content: center; 
+                    align-items: center;
+                    img{
+                      max-height: min(50vh, 360px);
+                      width: 100%;
+                      /* max-height: 50vh; */
+                      /* width: auto; */
+                      height: auto;
+                      max-width: 100%;
+                      /* border-radius: 15px; */
+                      border-radius: 15px;
+                      border: 1px solid rgba(255,255,255,.14);
+                    }
+                    grid-row: 1/2;
+                    grid-column: 6/8;
+                  }
+                  a{
+                    grid-row: 2/3;
+                    grid-column: 4/5;
+                    margin: 0;
+                  }
+                  p{
+                    font-size: clamp(1rem, 1.4vw, 1.2rem);
+                    color: rgba(233,238,247,.72);
+
+                    /* font-size: 1.5vw; */
+                  }
+                  .btn-cv {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 12px;
+                    justify-content: center;
+
+                    margin-top: 20px;
+                    padding: 12px 20px;
+
+
+                    background: linear-gradient(90deg, rgba(124,247,212,.22), rgba(255,122,162,.18));
+                    color: #e9eef7;
+                    /* background-color: #2563eb;
+                    color: white; */
+                    text-decoration: none;
+
+                    border-radius: 999px;
+                    border: 1px solid rgba(255,255,255,.14);
+                    /* border-radius: 20px; */
+                    font-weight: bold;
+                    
+                    transition: transform .2s ease, box-shadow .3s ease, filter .2s ease;
+                    /* transition: 
+                      background-color 0.3s ease,
+                      transform 0.2s ease,
+                      box-shadow 0.3s ease; */
+                  }
+                  .btn-cv:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 18px 45px rgba(0,0,0,.35);
+                    filter: brightness(1.05);
+                    /* background-color: #1d4ed8;
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 16px rgba(37,99,235,0.4); */
+                  }
+                }          
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
