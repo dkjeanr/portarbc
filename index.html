@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Personal</title>
+    <title>Portafolio Personal RBC</title>
     <link href="./estilo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <main class="principal" >
@@ -20,23 +21,104 @@
         
         <main class="cuerpo">
             <article id="sm">
-                <h1>Sobre mí
-                    <p>Estudiante de Desarrollo de Aplicaciones Web, con ganas de afrontar nuevos retos afinando mis habiliadades o aprendiendo otras nuevas.   </p></h1>                                            
+                <section>
+                    <h1>Desarrolladora Web Full-Stack Junior</h1>
+                    <p>
+                    Busco retos que me obliguen a mejorar mis habilidades y aprender tecnologías nuevas.
+                    </p>
+                    <ul class="tech-list" aria-label="Tecnologías principales">
+                        <li><i class="fas fa-code"></i> .NET Core MVC</li>
+                        <li><i class="fas fa-database"></i> SQL Server</li>
+                        <li><i class="fab fa-aws"></i> AWS Cloud</li>
+                    </ul>
+                    <p class="btn-group">
+                        <a href="curriculum.pdf" class="btn-cv" download>
+                            Descargar CV <i class="fas fa-download"></i>
+                        </a>
+                    </p>                     
+                </section>                                                      
                 <figure>
                     <img src="foto.jpg" alt="foto">
+                    <figcaption>Soy temporal</figcaption>
                 </figure>
-                <a href="curriculum.pdf" class="btn-cv" download>
-                <!-- <img src="icon-cv.svg" alt=""> -->
-                    Currículum
-                </a>
             </article>
-            <article id="competencias">Competencias</article>
-            <article id="experiencia">Experiencia</article>
-            <article id="contacto">Contacto</article>  
+            <article id="competencias">
+                <h2>Competencias</h2>
+                <section class="grid-competencias">
+                    <section>
+                        <h3><i class="fas fa-server"></i> Backend & Datos</h3>
+                        <ul>
+                            <li><strong>C# & .NET:</strong> ASP.NET Core MVC, Web Forms, ADO.NET.</li>
+                            <li><strong>ORM:</strong> Entity Framework Core.</li>
+                            <li><strong>Bases de Datos:</strong> SQL Server, PostgreSQL.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                        <ul>
+                            <li><strong>AWS:</strong> EC2, RDS, Route 53, VPC.</li>
+                            <li><strong>Contenedores:</strong> Docker.</li>
+                            <li><strong>Herramientas:</strong> Git/GitHub, Linux, VirtualBox.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                        <ul>
+                            <li>HTML5, CSS3, JavaScript.</li>
+                            <li>Bootstrap 5.</li>
+                            <li>Diseño Responsive.</li>
+                        </ul>
+                    </section>
+                </section>
+            </article>
+            <article id="experiencia">
+                <h2>Proyectos Destacados</h2>
+                <section class="projects-grid">
+                    <nav class="project-card">
+                        <h3>GesPresta</h3>
+                        <p class="project-desc">Sistema integral de gestión de Prestaciones Sociales. Arquitectura por capas con autenticación y CRUD completo.</p>
+                        <footer class="tags">
+                            <span>.NET Core MVC</span>
+                            <span>SQL Server</span>
+                            <span>EF Core</span>
+                        </footer>
+                    </nav>
+
+                    <nav class="project-card">
+                        <h3>Infraestructura Cloud AWS</h3>
+                        <p class="project-desc">Despliegue de aplicaciones web y BBDD en VPC privada asegurada, utilizando servicios de AWS y Docker.</p>
+                        <footer class="tags">
+                            <span>AWS EC2</span>
+                            <span>RDS</span>
+                            <span>Docker</span>
+                        </footer>
+                    </nav>
+                </section>
+            </article>
+            <article id="contacto">
+                <section class="contact-container">
+                    <h2>Hablemos</h2>
+                    <p>Estoy buscando activamente mi primera oportunidad como desarrolladora.</p>
+                    
+                    <address class="contact-links">
+                        <a href="mailto:raquel.blazquez.c@gmail.com" class="contact-item">
+                            <span>raquel.blazquez.c@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/dkjeanr" target="_blank" class="contact-item">
+                            <span>github.com/dkjeanr</span>
+                        </a>
+                        <p class="location-item">
+                            <span>Alicante, España</span>
+                        </p>
+                    </address>
+                </section>
+            </article>  
         </main>
 
     </main>
     
-   
+    <footer>
+        <p>© 2026 · Raquel Blázquez · Desarrolladora Web</p>
+  </footer>
 </body>
 </html>
